@@ -1,6 +1,6 @@
 import numpy
 import random
-# import sympy
+import sympy
 
 
 class DecodeASecret:

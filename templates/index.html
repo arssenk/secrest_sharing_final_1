@@ -24,8 +24,7 @@
 			<div id="team" class="section">
 
 				<div class="column col5 pl-50">
-					<img src="https://scontent.fhen1-1.fna.fbcdn.net/v/t1.0-9/14695594_807910489345845_8429746593490097679_n.jpg?oh=21d228ed3c99a602e201309700c2e9d8&oe=58C62E08" height="150" width="150" alt="Olya Bakay"/>
-					<img src="https://scontent.fhen1-1.fna.fbcdn.net/v/t1.0-9/11954847_539747382847656_3697153574335574051_n.jpg?oh=5188896c0d8cae14039e0df51587fd28&oe=58BEC53A" height="150" width="150" alt="Maryana Mysak" />
+					<img src="https://scontent.fhen1-1.fna.fWhat our project is about?bcdn.net/v/t1.0-9/11954847_539747382847656_3697153574335574051_n.jpg?oh=5188896c0d8cae14039e0df51587fd28&oe=58BEC53A" height="150" width="150" alt="Maryana Mysak" />
 					<img src="https://pp.vk.me/c836722/v836722501/162df/ObQP0Cp2UgQ.jpg" height="150" width="150" alt="Olena Skibinska" />
 					<img src="https://pp.vk.me/c636631/v636631372/3e173/PxXOD9ifJQs.jpg" height="150" width="150" alt="Andriy Pankiv"/>
 					<img src="https://pp.vk.me/c636631/v636631372/3e161/S5joSHyM7v4.jpg" height="150" width="150"  style="position: absolute; top: 29px; right: 303px;" alt="Arsen Senkivskiy" />
@@ -50,11 +49,16 @@ Also our algorithm use GF(2). It means that we have 10 six-dimensional vector ty
 			<div id="links" class="section">
 				<div class="column col5 pl-50">
 					<h3>Inpute phrase, which you want to encode</h3>
-					<form id="linksform">
-						<textarea type="text" name="secret_phrase" size="35" value="" placeholder="Please, input your secret phrase here:" id="secret-phrase" class="text-area-computations"></textarea>
+					<form id="linksform" method="post" action="/">
+						<textarea type="text" name="secret_phrase" size="35" value="" placeholder="Please, input your secret phrase here:" id="secret-phrase" class="text-area-computations"> </textarea>
 						<p><input type="submit" value="Send"></p>
 
 					</form>
+					{% if output_string is defined %}
+					<form id="output" method="post" action="/">
+						<textarea type="text" name="secret_phrase" size="35" value="" placeholder="output" id="outputsecret-phrase" class="text-area-computations">{{output_string}} </textarea>
+					</form>
+					{% endif %}
 				</div>
 			</div>
 		</div>

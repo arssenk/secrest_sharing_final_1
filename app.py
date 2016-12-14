@@ -7,6 +7,16 @@ app = Flask(__name__, )
 
 @app.route('/', methods=["GET", "POST"])
 def web_rectificate():
+    if request.method == "POST":
+        input = request.form['secret_phrase']
+        output = main.main(input)
+        return render_template("index.html", output_string = output)
+    else:
+        return render_template("index.html")
+
+
+if __name__ == '__main__':
+   app.run(debug=True)
 
 #     if request.method == "POST":
 #         coords = request.form['general']
@@ -44,8 +54,3 @@ def web_rectificate():
 #
 #         return render_template("rectify_index.html", im=init_im_addr, new_im=new_im_addr)
 #     else:
-        return render_template("index.html")
-
-
-if __name__ == '__main__':
-   app.run(debug=True)
