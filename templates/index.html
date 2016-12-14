@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta conten="math" name="project">
+	<link type="text/css" rel="stylesheet" href="/static/css/style.css" media="screen" />
+	<script src="//code.jquery.com/jquery-1.9.1.js"></script>
+	 <title> Linear Algebra. Project </title>
+</head>
+
+<body>
+	<div id="mainwrap">
+
+		<header>
+			<h1><a>Secret Sharing</a></h1>
+			<h2>Second project</h2>
+			<ul id="menu">
+				<li><a class="team" href="#team" title="Team">Team</a><span>Just us and some additional links</span></li>
+				<li><a class="theory" href="#theory" title="Theory">Theoretical part</a><span>Briefly about project</span></li>
+				<li><a class="links" href="#links" title="Encode your phrase here!">Project</a><span>Project</span></li>
+			</ul>
+		</header>
+		<div style="clear:both"></div>
+		<div id="content">
+			<div id="team" class="section">
+
+				<div class="column col5 pl-50">
+					<img src="https://scontent.fhen1-1.fna.fbcdn.net/v/t1.0-9/14695594_807910489345845_8429746593490097679_n.jpg?oh=21d228ed3c99a602e201309700c2e9d8&oe=58C62E08" height="150" width="150" alt="Olya Bakay"/>
+					<img src="https://scontent.fhen1-1.fna.fbcdn.net/v/t1.0-9/11954847_539747382847656_3697153574335574051_n.jpg?oh=5188896c0d8cae14039e0df51587fd28&oe=58BEC53A" height="150" width="150" alt="Maryana Mysak" />
+					<img src="https://pp.vk.me/c836722/v836722501/162df/ObQP0Cp2UgQ.jpg" height="150" width="150" alt="Olena Skibinska" />
+					<img src="https://pp.vk.me/c636631/v636631372/3e173/PxXOD9ifJQs.jpg" height="150" width="150" alt="Andriy Pankiv"/>
+					<img src="https://pp.vk.me/c636631/v636631372/3e161/S5joSHyM7v4.jpg" height="150" width="150"  style="position: absolute; top: 29px; right: 303px;" alt="Arsen Senkivskiy" />
+				</div>
+					<div style="position:absolute; right:25px; top:200px;">
+						<ul><h1>Some additional links, that may help you:</h1>
+							<li><a href="http://arssenk.pythonanywhere.com/?" target="_blank">Our first project</a></li>
+							<li><a href="https://github.com/arssenk/General_LA" target="_blank">Link on GitHub for 1st project</a></li>
+							<li><a href="https://github.com/PankivAndrew/SecretSharing_final_version" target="_blank">Link on GitHub for 2nd project</a></li>
+						</ul>
+					</div>
+			</div>
+
+			<div id="theory" class="section">
+				<h1 align="center">What our project is about?</h1>
+				<h2 align="center">(briefly speaking :)</h2>
+				<h3>Our project is about splitting the secret among, say, four teaching assistants (TAs), using a threshold secret-sharing scheme, so that any three TAs could jointly recover the secret, but any two TAs could not.
+Also our algorithm use GF(2). It means that we have 10 six-dimensional vector type GF (2), which must be composed of 0 and 1</h3>
+
+			</div>
+
+			<div id="links" class="section">
+				<div class="column col5 pl-50">
+					<h3>Inpute phrase, which you want to encode</h3>
+					<form id="linksform">
+						<textarea type="text" name="secret_phrase" size="35" value="" placeholder="Please, input your secret phrase here:" id="secret-phrase" class="text-area-computations"></textarea>
+						<p><input type="submit" value="Send"></p>
+
+					</form>
+				</div>
+			</div>
+		</div>
+
+		<!-- <div id="footer">
+
+		</div> -->
+
+		<script type="text/javascript">
+			$(document).ready(function() {
+			    $(".section").not(":first").hide();
+			    $("ul#menu li:first").addClass("active").show();
+
+			    $("ul#menu li").click(function() {
+			        $("ul#menu li.active").removeClass("active");
+			        $(this).addClass("active");
+			        $(".section").slideUp();
+			        $($('a',this).attr("href")).slideDown('slow');
+
+			        return false;
+			    });
+
+			});
+		</script>
+	</div>
+</body>
+</html>
